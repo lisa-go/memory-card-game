@@ -1,11 +1,9 @@
+import Content from './components/Content';
 import './styles/style.scss'
 
-function App() {
+
+export default function App() {
   return (
-    <div>
-      It's working!
-    </div>
+    <Content />
   );
 }
-
-export default App;
