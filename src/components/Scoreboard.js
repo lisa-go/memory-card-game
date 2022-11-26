@@ -1,7 +1,17 @@
 
 
-export default function Scoreboard() {
+export default function Scoreboard({ pickedCards, highScore }) {
+
+
     return(
-        <div>scoreboard</div>
+        <div>
+            <div className="currentScore">
+                Score: {pickedCards.length}
+            </div>
+            
+            <div className="highScore">
+                High Score: {highScore}
+            </div>
+            </div>
     )
 }

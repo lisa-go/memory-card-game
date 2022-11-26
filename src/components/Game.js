@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Cards from "./Cards";
 import Scoreboard from "./Scoreboard";
+import Shuffle from "./Shuffle";
 import Aia from '../images/Aia.png';
 import Alban from '../images/Alban.png';
 import Aster from '../images/Aster.png';
@@ -55,22 +56,49 @@ export default function Game() {
         {name: 'Sonny', image: Sonny}, 
         {name: 'Uki', image: Uki}, 
         {name: 'Vox', image: Vox}, 
-        {name: 'Yugo', image: Yugo} ])
+        {name: 'Yugo', image: Yugo} ]);
 
-    let availableCards = allCards;
+    const [pickedCards, setPickedCards] = useState([]);
 
-    let pickedCards = [];
+    const [highScore, setHighScore] = useState(0);
+
+    const handleCard = (card) => {
+        if (pickedCards.length >= 26) {
+            alert('You Win!');
+        }
+        else if (pickedCards.includes(card)) {
+            alert('You Lose!');
+            
+            if (pickedCards.length > highScore) {
+                setHighScore(pickedCards.length);
+            }
+            setPickedCards([]);
+        }
+        else {
+        setPickedCards([...pickedCards, card]);
+        setCards(Shuffle(allCards));
+        console.log(pickedCards);
+        }
+    }
+
+
 
     return(
         <div>
-            <Scoreboard />
+            <Scoreboard 
+                pickedCards={pickedCards} 
+                highScore={highScore} />
 
-            {allCards.map((card) => {
-                return(
-                    <Cards key={card.name} card={card} />
-                )
-            })}
-            
+            <div id="gameContainer">
+                {allCards.map((card) => {
+                    return(
+                        <Cards 
+                            key={card.name} 
+                            card={card} 
+                            handleCard={handleCard} />
+                    )
+                })}
+            </div>
         </div>
     )
 }

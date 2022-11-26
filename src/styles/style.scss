@@ -2,6 +2,11 @@ body {
     background-color: peachpuff;
 }
 
+#gameContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .cardContainer {
     
     img {
