@@ -77,7 +77,6 @@ export default function Game() {
         else {
         setPickedCards([...pickedCards, card]);
         setCards(Shuffle(allCards));
-        console.log(pickedCards);
         }
     }
 

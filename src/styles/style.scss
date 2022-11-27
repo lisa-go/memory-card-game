@@ -1,14 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Alef:wght@400;700&family=Chewy&display=swap');
+$logo-font: 'Chewy', cursive;
+$main-font: 'Alef', sans-serif;
+$c1: #F6E8EA;
+$c2: #EF626C;
+$c3: #22181C;
+$c4: #312F2F;
+$c5: #84DCCF;
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: $main-font;
+}
+
 body {
-    background-color: peachpuff;
+    background-color: $c4;
+}
+
+#Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 3rem;
+    background-color: $c5;
+    
+    .Logo {
+        font-family: $logo-font;
+        font-size: 2rem;
+        color: $c2;
+        text-shadow: 3px 2.5px 1.5px $c3;
+        letter-spacing: 1.5px;
+    }
+
+    .Help {
+       cursor: pointer;
+    }
+}
+
+#tooltip {
+    display: block;
+    position: absolute;
+}
+
+#Scoreboard {
+    margin: 1rem 0;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: $c1;
 }
 
 #gameContainer {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 1rem;
 }
 
-.cardContainer {
-    
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px double $c3;
+    color: $c3;
+    font-size: 1.1rem;
+    padding: 6px;
+    background-color: rgba(255, 255, 255, 0.4);
+
     img {
         width: 150px;
     }
