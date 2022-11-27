@@ -63,7 +63,7 @@ export default function Game() {
     const [highScore, setHighScore] = useState(0);
 
     const handleCard = (card) => {
-        if (pickedCards.length >= 26) {
+        if (pickedCards.length == 26) {
             alert('You Win!');
         }
         else if (pickedCards.includes(card)) {
@@ -79,8 +79,6 @@ export default function Game() {
         setCards(Shuffle(allCards));
         }
     }
-
-
 
     return(
         <div>

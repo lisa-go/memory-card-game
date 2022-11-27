@@ -33,13 +33,8 @@ body {
     }
 
     .Help {
-       cursor: pointer;
+       cursor: help;
     }
-}
-
-#tooltip {
-    display: block;
-    position: absolute;
 }
 
 #Scoreboard {
@@ -58,6 +53,7 @@ body {
 }
 
 .card {
+    cursor: grabbing;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -68,7 +64,22 @@ body {
     padding: 6px;
     background-color: rgba(255, 255, 255, 0.4);
 
+    &:hover {
+        transform: scale(1.2);
+        transition: 500ms;
+    }
     img {
         width: 150px;
+    }
+}
+
+#modalBg {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+
+    #modal {
+        background-color: navy;
+        color: white;
     }
 }

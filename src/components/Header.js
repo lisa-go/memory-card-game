@@ -1,28 +1,17 @@
 import { TiLightbulb } from 'react-icons/ti';
-import React, { useState } from 'react';
+import ReactTooltip from 'react-tooltip';
 
 export default function Header() {
-    const [isHovering, setIsHovering] = useState(false);
-    const handleMouseOver = () => {
-        setIsHovering(true);
-    };
-    const handleMouseOut = () => {
-        setIsHovering(false);
-    };
-
     return(
         <div id="Header">
             <div className="Logo">Niji Memory Game</div>
-            <div className="Help"
-                onMouseOver={handleMouseOver} 
-                onMouseOut={handleMouseOut} >
+            <div className="Help" 
+                data-tip="
+                Click on a card to score a point! 
+                Clicking the same card twice will end the game.
+                ">
                 <TiLightbulb size={30} />
-
-                {isHovering && (
-                <div title="Tooltip">
-                    Testing Tooltip
-                </div>
-            )}
+                <ReactTooltip />
             </div>
         </div>
     )
