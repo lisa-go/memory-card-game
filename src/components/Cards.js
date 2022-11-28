@@ -1,8 +1,6 @@
-
-
 export default function Cards({ card, handleCard }) {
 
-    return(
+    return (
         <div className="cardContainer">
             <div className="card" onClick={() => handleCard(card)}>
                 <img src={card.image} />

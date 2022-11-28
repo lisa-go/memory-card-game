@@ -1,9 +1,8 @@
 import Game from "./Game";
 import Header from "./Header";
 
-
 export default function Content() {
-    return(
+    return (
         <div>
             <Header />
             <Game />

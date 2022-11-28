@@ -31,67 +31,72 @@ import Yugo from '../images/Yugo.png';
 
 export default function Game() {
     const [allCards, setCards] = useState([
-        {name: 'Aia', image: Aia}, 
-        {name: 'Alban', image: Alban}, 
-        {name: 'Aster', image: Aster}, 
-        {name: 'Elira', image: Elira}, 
-        {name: 'Enna', image: Enna}, 
-        {name: 'Finana', image: Finana}, 
-        {name: 'Fulgur', image: Fulgur}, 
-        {name: 'Ike', image: Ike}, 
-        {name: 'Kyo', image: Kyo},
-        {name: 'Luca', image: Luca}, 
-        {name: 'Maria', image: Maria}, 
-        {name: 'Millie', image: Millie}, 
-        {name: 'Mysta', image: Mysta}, 
-        {name: 'Nina', image: Nina}, 
-        {name: 'Petra', image: Petra}, 
-        {name: 'Pomu', image: Pomu}, 
-        {name: 'Reimu', image: Reimu}, 
-        {name: 'Ren', image: Ren}, 
-        {name: 'Rosemi', image: Rosemi}, 
-        {name: 'Scarle', image: Scarle}, 
-        {name: 'Selen', image: Selen}, 
-        {name: 'Shu', image: Shu}, 
-        {name: 'Sonny', image: Sonny}, 
-        {name: 'Uki', image: Uki}, 
-        {name: 'Vox', image: Vox}, 
-        {name: 'Yugo', image: Yugo} ]);
+        { name: 'Aia', image: Aia },
+        { name: 'Alban', image: Alban },
+        { name: 'Aster', image: Aster },
+        { name: 'Elira', image: Elira },
+        { name: 'Enna', image: Enna },
+        { name: 'Finana', image: Finana },
+        { name: 'Fulgur', image: Fulgur },
+        { name: 'Ike', image: Ike },
+        { name: 'Kyo', image: Kyo },
+        { name: 'Luca', image: Luca },
+        { name: 'Maria', image: Maria },
+        { name: 'Millie', image: Millie },
+        { name: 'Mysta', image: Mysta },
+        { name: 'Nina', image: Nina },
+        { name: 'Petra', image: Petra },
+        { name: 'Pomu', image: Pomu },
+        { name: 'Reimu', image: Reimu },
+        { name: 'Ren', image: Ren },
+        { name: 'Rosemi', image: Rosemi },
+        { name: 'Scarle', image: Scarle },
+        { name: 'Selen', image: Selen },
+        { name: 'Shu', image: Shu },
+        { name: 'Sonny', image: Sonny },
+        { name: 'Uki', image: Uki },
+        { name: 'Vox', image: Vox },
+        { name: 'Yugo', image: Yugo }]);
 
     const [pickedCards, setPickedCards] = useState([]);
 
     const [highScore, setHighScore] = useState(0);
 
     const handleCard = (card) => {
-        if (pickedCards.length == 26) {
-            alert('You Win!');
-        }
-        else if (pickedCards.includes(card)) {
+        if (pickedCards.includes(card)) {
             alert('You Lose!');
-            
+            setPickedCards([]);
+
             if (pickedCards.length > highScore) {
                 setHighScore(pickedCards.length);
             }
-            setPickedCards([]);
+            return;
         }
         else {
-        setPickedCards([...pickedCards, card]);
-        setCards(Shuffle(allCards));
+            setPickedCards([...pickedCards, card]);
+            setCards(Shuffle(allCards));
+            return;
         }
     }
 
-    return(
+    if (pickedCards.length === 26) {
+        setHighScore(26);
+        setPickedCards([]);
+        alert('Win');
+    }
+
+    return (
         <div>
-            <Scoreboard 
-                pickedCards={pickedCards} 
+            <Scoreboard
+                pickedCards={pickedCards}
                 highScore={highScore} />
 
             <div id="gameContainer">
                 {allCards.map((card) => {
-                    return(
-                        <Cards 
-                            key={card.name} 
-                            card={card} 
+                    return (
+                        <Cards
+                            key={card.name}
+                            card={card}
                             handleCard={handleCard} />
                     )
                 })}

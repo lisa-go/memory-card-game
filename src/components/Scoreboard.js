@@ -1,5 +1,6 @@
 export default function Scoreboard({ pickedCards, highScore }) {
-    return(
+
+    return (
         <div id="Scoreboard">
             <div className="highScore">
                 High Score: {highScore}
