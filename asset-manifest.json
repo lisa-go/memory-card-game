@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/memory-card-game/static/css/main.1940ea78.css",
+    "main.js": "/memory-card-game/static/js/main.308f1f5b.js",
+    "static/media/Enna.png": "/memory-card-game/static/media/Enna.7829cf56b9192aab8261.png",
+    "static/media/Shu.png": "/memory-card-game/static/media/Shu.db711afa539f0eb888b3.png",
+    "static/media/Nina.png": "/memory-card-game/static/media/Nina.5b31813e611a2608d602.png",
+    "static/media/Finana.png": "/memory-card-game/static/media/Finana.c7bbeff545427191abb5.png",
+    "static/media/Elira.png": "/memory-card-game/static/media/Elira.7dfea084761a91d54fa2.png",
+    "static/media/Selen.png": "/memory-card-game/static/media/Selen.eff601675085d10ed651.png",
+    "static/media/Reimu.png": "/memory-card-game/static/media/Reimu.d6138392d85ce3e03640.png",
+    "static/media/Rosemi.png": "/memory-card-game/static/media/Rosemi.30ced135a47b8f389dfa.png",
+    "static/media/Aster.png": "/memory-card-game/static/media/Aster.09caf7100f9c7f5b18ce.png",
+    "static/media/Millie.png": "/memory-card-game/static/media/Millie.5eba1ef3b023918a5035.png",
+    "static/media/Scarle.png": "/memory-card-game/static/media/Scarle.78403fbfd3cb0918c72f.png",
+    "static/media/Pomu.png": "/memory-card-game/static/media/Pomu.09b08f59f01c8b07b5cc.png",
+    "static/media/Petra.png": "/memory-card-game/static/media/Petra.12d21adfef4d91d16a90.png",
+    "static/media/Sonny.png": "/memory-card-game/static/media/Sonny.6ca9f48dbc02c369ae03.png",
+    "static/media/Luca.png": "/memory-card-game/static/media/Luca.120a61d2bbda0845b0fd.png",
+    "static/media/Uki.png": "/memory-card-game/static/media/Uki.3d5b924ed9438cb83572.png",
+    "static/media/Alban.png": "/memory-card-game/static/media/Alban.fc280ff459beb0c29809.png",
+    "static/media/Ike.png": "/memory-card-game/static/media/Ike.cff3a39b6d4856cadde1.png",
+    "static/media/Kyo.png": "/memory-card-game/static/media/Kyo.11f5577b004bbde5d0fd.png",
+    "static/media/Mysta.png": "/memory-card-game/static/media/Mysta.b08d8ebd3809e11fe395.png",
+    "static/media/Vox.png": "/memory-card-game/static/media/Vox.4c936f1d0b5ecf74ef89.png",
+    "static/media/Aia.png": "/memory-card-game/static/media/Aia.2416f413b049ced89cc3.png",
+    "static/media/Maria.png": "/memory-card-game/static/media/Maria.12a082cb77e3a051adbe.png",
+    "static/media/Yugo.png": "/memory-card-game/static/media/Yugo.d53d55b743463c0514b0.png",
+    "static/media/Fulgur.png": "/memory-card-game/static/media/Fulgur.701c65fae7c5ffcb1eb6.png",
+    "static/media/Ren.png": "/memory-card-game/static/media/Ren.dc5771f6031eabd18644.png",
+    "index.html": "/memory-card-game/index.html",
+    "main.1940ea78.css.map": "/memory-card-game/static/css/main.1940ea78.css.map",
+    "main.308f1f5b.js.map": "/memory-card-game/static/js/main.308f1f5b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1940ea78.css",
+    "static/js/main.308f1f5b.js"
+  ]
+}
