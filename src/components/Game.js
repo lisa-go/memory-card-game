@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Cards from "./Cards";
 import Scoreboard from "./Scoreboard";
 import Shuffle from "./Shuffle";
@@ -79,11 +79,13 @@ export default function Game() {
         }
     }
 
-    if (pickedCards.length === 26) {
-        setHighScore(26);
-        setPickedCards([]);
-        alert('Win');
-    }
+    useEffect(() => {
+        if (pickedCards.length === 26) {
+            setHighScore(26);
+            setPickedCards([]);
+            alert('Win');
+        }
+    }, [pickedCards])
 
     return (
         <div>
